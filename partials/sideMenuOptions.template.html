@@ -1,0 +1,9 @@
+<md-content md-padding layout-gt-sm style="border-radius:30px;">
+	<md-button ng-repeat="svgs in svgList" name="{{svgs.name}}" class="md-icon-button test-tooltip" ng-click="iconClick(svgs.name)" flex>
+		<md-tooltip  md-direction="bottom">
+              {{svgs.name}}
+            </md-tooltip>
+		<md-icon md-svg-icon="{{svgs.url}}" ng-if="svgs.activate" style="fill:black;" aria-label="{{svgs.name}}"></md-icon>
+		<md-icon md-svg-icon="{{svgs.url}}" ng-if="!svgs.activate"  aria-label="{{svgs.name}}"></md-icon>
+	</md-button>
+</md-content> 

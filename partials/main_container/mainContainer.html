@@ -1,0 +1,14 @@
+<!-- <div><side-bar></side-bar></div> -->
+<md-toolbar layout="row" flex>
+
+<md-icon md-svg-src="../resources/honeyBee.svg"
+                 aria-label="Insert Drive Icon" flex=10 style="width:60px;height:60px;margin: auto auto auto 0;" layout-align="start center">
+        </md-icon>
+<md-icon md-svg-icon="core:add-shopping-cart"
+                 aria-label="Cart" layout-align="space-between center" style="margin: auto 2% auto auto;"></md-icon>
+<avatar></avatar>
+</md-toolbar>
+<div layout="row" flex>
+	<section ui-view="sidebar" layout="row" flex="25"></section>
+	<section ui-view="content" layout="column" layout-align="center stretch" flex></section>
+</div>

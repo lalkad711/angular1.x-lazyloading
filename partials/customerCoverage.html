@@ -1,0 +1,52 @@
+<div layout="column" ng-cloak class="md-inline-form" layout-padding>
+ 
+  <md-content>
+    <div>
+      <form name="formCoverage">
+       <b>New Line</b>        
+		
+		<div layout-gt-sm="row">
+         <md-input-container class="md-block" flex-gt-sm>
+            <md-radio-group ng-model="number">		
+		      <md-radio-button value="OldNumber" class="md-primary">Keep your number</md-radio-button>
+		      <md-radio-button value="NewNumber">New Number</md-radio-button>
+		    </md-radio-group>
+			<div ng-messages="formCoverage.number.$error" role="alert">
+              <div ng-message="required" class="my-message">Please select either options</div>              
+            </div>
+          </md-input-container>        
+          
+        </div>
+       
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>MOBILE NUMBER</label>
+            <input name="Mob" ng-model="Mob" required >
+			<div ng-messages="formCoverage.Mob.$error" role="alert">
+              <div ng-message="required" class="my-message">Please enter Mobile no.</div>              
+            </div>
+          </md-input-container>
+          
+          
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>SUBSCRIBER NAME</label>
+            <input name="Mob" ng-model="Sub" required >
+			<div ng-messages="formCoverage.Sub.$error" role="alert">
+              <div ng-message="required" class="my-message">Please enter Subscriber name</div>              
+            </div>
+          </md-input-container>          
+        </div>
+        
+        <div layout-gt-sm="row" layout-align="center end"  flex-gt-sm>
+            <md-button class="md-raised md-primary" ng-click="submit(formCoverage)" ng-disabled="validateNumber" >Validate number</md-button>
+        </div>
+      </form>
+       <div layout-gt-sm="column" layout-align="start stretch"  flex-gt-sm>
+      		<md-button ng-disabled="enableContinue" class="md-raised md-primary">Continue</md-button>
+      </div>
+    </div>
+  </md-content>
+
+</div> 
+
+

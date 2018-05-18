@@ -1,0 +1,20 @@
+/* app css stylesheet */
+* { 
+  text-rendering: auto !important; 
+}
+.centerAlignText{
+	text-align: center;
+}
+.button {
+    background-color:#339CFF;
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+.button4 {border-radius: 20px;}

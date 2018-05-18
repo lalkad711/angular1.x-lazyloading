@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" ng-controller="CommonController">
+<head>
+	<meta charset="utf-8">
+	<title>Sprint New Journey</title>
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+	<link href="css/app.css" type="text/css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/angular-material.css">
+	<link ng-repeat="stylesheet in stylesheets" ng-href="{{stylesheet}}" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- <div layout="row" layout-sm="column" layout-align="space-around"> -->
+<!-- 	<md-progress-circular ng-disabled="progressCircular" ng-hide="progressCircular" md-mode="indeterminate" md-diameter="60"></md-progress-circular> -->
+<!-- </div> -->
+<div ui-view></div>
+<script data-main="js/main" src="lib/require/require.js"></script>
+</body>
+</html>

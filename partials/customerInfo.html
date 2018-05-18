@@ -1,0 +1,82 @@
+<div layout="column" ng-cloak class="md-inline-form" layout-padding>
+ 
+  <md-content>
+    <div>
+      <form name="myForm">
+       
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>FIRST NAME</label>
+            <input ng-model="firstName">
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>LAST NAME</label>
+            <input ng-model="lastName">
+          </md-input-container>
+        </div>
+		
+		<div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>EMAIL</label>
+            <input ng-model="email">
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>PHONE NUMBER</label>
+            <input ng-model="phoneNumber">
+          </md-input-container>
+        </div>
+
+        <md-input-container class="md-block">
+          <label>ADDRESS</label>
+          <input name="address" ng-model="address" ng-change="myFunc()" required >
+		  <div ng-messages="myForm.address.$error" role="alert">
+              <div ng-message="required" class="my-message">Please provide the address</div>              
+            </div>
+        </md-input-container>
+
+       
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>CITY</label>
+            <input name="city" ng-model="city" ng-change="myFunc()" required>
+			<div ng-messages="myForm.city.$error" role="alert">
+              <div ng-message="required" class="my-message">Please select a city</div>              
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>STATE</label>
+            <md-select name="state" ng-model="state" ng-change="myFunc()" required>
+              <md-option ng-repeat="state in states" value="{{state}}">{{state}}
+              </md-option>
+            </md-select>
+			<div ng-messages="myForm.state.$error" role="alert">
+              <div ng-message="required" class="my-message">Please select a state</div>              
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>ZIP</label>
+            <input name="zip" ng-model="zip"
+                   required md-maxlength="5" ng-change="myFunc()">
+
+            <div ng-messages="myForm.zip.$error" role="alert">
+              <div ng-message="required" class="my-message">You must supply a postal code.</div>            
+            </div>
+          </md-input-container>
+        </div>
+        
+        <div layout-gt-sm="row" layout-align="center end"  flex-gt-sm>
+            <md-button class="md-raised md-primary" ng-click="submit(myForm)" ng-disabled="validateAddress" >Validate Address</md-button>
+<!--             <button type="submit" class="md-raised md-primary" ng-click="submit(myForm)">Validate Address</button> -->
+        </div>
+      </form>
+       <div layout-gt-sm="column" layout-align="start stretch"  flex-gt-sm>
+      		<md-button ng-disabled="enableContinue" class="md-raised md-primary" ng-click="customerCoverage()">Continue</md-button>
+      </div>
+    </div>
+  </md-content>
+
+</div> 

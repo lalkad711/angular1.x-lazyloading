@@ -1,0 +1,30 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form class="md-padding">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Please select one of below store: </h2>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content layout="column">
+	    <span class="md-title md-padding">Pick a store : </span>
+		<md-input-container>
+		  <label>Store</label>
+		  <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+		    <md-optgroup label="items">
+		      <md-option ng-value="item" ng-repeat="item in items">{{item}}</md-option>
+		    </md-optgroup>
+		  </md-select>
+		</md-input-container>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button ng-click="continueJourney(selectedItem)">
+      	Continue
+      </md-button>
+      <md-button ng-click="cancelJourney()">
+        Cancel
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
